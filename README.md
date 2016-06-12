@@ -1,2 +1,7 @@
-# boiler-node
-Boilerplate for Node.js.
+# Boilerplate for Node.js
+
+## Inside the box
+- Node.js
+- Express
+- Postgresql
+- React.js
