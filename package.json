@@ -30,6 +30,7 @@
     "forever": "~0.15.1",
     "method-override": "~2.3.5",
     "morgan": "~1.7.0",
+    "passport": "^0.3.2",
     "view-helpers": "~0.1.5",
     "winston": "~2.2.0"
   },
