@@ -4,9 +4,6 @@
  * Module dependencies.
  */
 
-// EXAMPLE
-// const home = require('../app/controllers/home');
-
 /**
  * Expose
  */
@@ -14,6 +11,7 @@
 module.exports = function (app, passport) {
 
   // app.get('/', home.index);
+  app.get('/', require('../app/controllers/').index);
 
   /**
    * Error handling
