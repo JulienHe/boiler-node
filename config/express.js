@@ -54,7 +54,7 @@
 	if (env !== 'test') app.use(morgan(log));
 
 	// Use ract.js for views
-	app.set('views', config.root + '/views');
+	app.set('views', config.root + '/app/views');
 	app.set('view engine', 'jsx');
 	app.engine('jsx', require('express-react-views').createEngine());
 
