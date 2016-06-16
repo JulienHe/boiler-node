@@ -77,7 +77,7 @@
 	  delete req.body._method;
 	  return method;
 	}
-	}));
+}));
 
 	// cookieParser should be above session
 	app.use(cookieParser());
@@ -108,5 +108,5 @@
 		res.locals.csrf_token = req.csrfToken();
 		next();
 	});
-	}
-	};
+}
+};

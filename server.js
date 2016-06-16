@@ -38,5 +38,10 @@ require('./config/passport')(passport);
 require('./config/express')(app, passport);
 require('./config/routes')(app, passport);
 
-app.listen(port);
-console.log('Express app started on port ' + port);
+// app.listen(port);
+// console.log('Express app started on port ' + port);
+models.sequelize.sync().then(function () {
+  var server = app.listen(port, function() {
+    debug('Express server listening on port ' + server.address().port);
+  });
+});
