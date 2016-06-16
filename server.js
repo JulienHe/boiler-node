@@ -15,7 +15,8 @@ const join = require('path').join;
 const express = require('express');
 const passport = require('passport');
 
-const models = join(__dirname, 'app/models');
+const modelsPath = join(__dirname, 'app/models');
+const models = require('./app/models');
 const port = process.env.PORT || 1337;
 
 const app = express();
@@ -29,9 +30,9 @@ module.exports = {
 };
 
 // Bootstrap models
-fs.readdirSync(models)
+fs.readdirSync(modelsPath)
   .filter(file => ~file.indexOf('.js'))
-  .forEach(file => require(join(models, file)));
+  .forEach(file => require(join(modelsPath, file)));
 
 // Bootstrap routes
 require('./config/passport')(passport);
